@@ -1,0 +1,34 @@
+<form>
+  <label for="name">Name: </label>
+  <input type="text" class="form-control" id="name" [formControl]="name" required><br>
+  <label for="name">Birthdate: </label>
+  <input type="date" class="form-control" id="birthdate" [formControl]="birthdate"><br>
+  <label for="name">Current Date: </label>
+  <input type="date" class="form-control" id="date" [formControl]="date"><br>
+  <label for="name">Risk Group: </label>
+  <input type="text" class="form-control" id="risk" [formControl]="risk" ><br>
+  <label for="name">Gender: </label>
+  <input list="genders" class="form-control" id="sex"  [formControl]="sex" required><br>
+  <datalist id="genders">
+    <option value="Male">
+    <option value="Female">
+    <option value="Other">
+  </datalist>
+  <label for="name">E-Mail: </label>
+  <input type="text" class="form-control" id="email" [formControl]="email"><br>
+  <label for="name">Phone: </label>
+  <input type="text" class="form-control" id="phone" [formControl]="phone"><br>
+  <label for="name">Address: </label>
+  <input type="text" class="form-control" id="address" [formControl]="address"><br>
+  <label for="name">Test Result: </label>
+  <input list="results" class="form-control" id="class" [formControl]="class" required>
+  <datalist id="results">
+    <option value="Negative">
+    <option value="Pending">
+    <option value="Positive">
+    <option value="Not a Case">
+  </datalist><br>
+
+
+  <button (click)="submitData()">Send to Server</button>
+</form>

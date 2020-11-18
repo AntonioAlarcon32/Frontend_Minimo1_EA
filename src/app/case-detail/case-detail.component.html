@@ -1,0 +1,29 @@
+<div *ngIf="case">
+  <h2>Selected Case</h2>
+
+  <h4>ID: {{case._id}}</h4>
+  <h4>Name: {{case.name}} <input type="text" class="form-control" id="name" [formControl]="name" required></h4>
+  <h4>Address: {{case.address}} <input type="text" class="form-control" id="address" [formControl]="address"></h4>
+  <h4>Gender: {{case.sex}} <input list="genders" class="form-control" id="sex"  [formControl]="sex" required></h4>
+  <h4>Birthdate: {{case.birthdate}} <input type="date" class="form-control" id="birthdate" [formControl]="birthdate"></h4>
+  <h4>Test Date: {{case.date}} <input type="date" class="form-control" id="date" [formControl]="date"></h4>
+  <h4>Risk: {{case.risk}}<input type="text" class="form-control" id="risk" [formControl]="risk" ></h4>
+  <h4>Phone: {{case.phone}} <input type="text" class="form-control" id="phone" [formControl]="phone" required></h4>
+  <h4>Email: {{case.email}} <input type="text" class="form-control" id="email" [formControl]="email"></h4>
+  <h4>Test Result: {{case.class}} <input list="results" class="form-control" id="class" [formControl]="class" required></h4>
+
+  <button (click)="updateData()">Update Case</button>
+
+  <datalist id="genders">
+    <option value="Male">
+    <option value="Female">
+    <option value="Other">
+  </datalist>
+
+  <datalist id="results">
+    <option value="Negative">
+    <option value="Pending">
+    <option value="Positive">
+    <option value="Not a Case">
+  </datalist><br>
+</div>

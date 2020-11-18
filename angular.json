@@ -120,5 +120,8 @@
       }
     }
   },
-  "defaultProject": "FrontendMinimoEA"
+  "defaultProject": "FrontendMinimoEA",
+  "cli": {
+    "analytics": false
+  }
 }
